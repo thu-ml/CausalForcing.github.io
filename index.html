@@ -1,1 +1,523 @@
-hello
+  <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Causal-Forcing</title>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.getElementById('toggleButton');
+      const tocContent = document.getElementById('tocContent');
+      const tocHeader = document.querySelector('.toc-header');
+
+      function toggleMenu() {
+        tocContent.classList.toggle('collapsed');
+        toggleButton.textContent = tocContent.classList.contains('collapsed') ? '▶' : '▼';
+      }
+
+      tocHeader.addEventListener('click', toggleMenu);
+    });
+
+  </script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['//(', '//)']] // 定义行内公式的定界符（例如 $...$ 或 /(.../)）
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="preload" href="./static/css/index.css" as="style">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script defer src="./static/js/bulma-carousel.min.js"></script>
+  <script defer src="./static/js/bulma-slider.min.js"></script>
+  <script defer src="./static/js/index.js"></script>
+
+
+</head>
+
+<body>
+
+
+  
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h4 class="title is-3 publication-title">Causal Forcing: Autoregressive Diffusion Distillation Done Right for High-Quality Real-Time Interactive Video Generation</h4>
+            
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">
+                <a href="https://zhuhz22.github.io/">Hongzhou Zhu*</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://gracezhao1997.github.io/">Min Zhao*</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://guandehe.github.io/">Guande He</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=dxN1_X0AAAAJ&hl=en&oi=ao">Hang Su</a><sup>5</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://zhenxuan00.github.io/">Chongxuan Li</a><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://ml.cs.tsinghua.edu.cn/~jun/index.shtml">Jun Zhu</a><sup>1,2</sup>
+              </span>
+            </div>
+            <br>
+
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>1</sup>THU,</span>
+              <span class="author-block"><sup>2</sup>ShengShu,</span>
+              <span class="author-block"><sup>3</sup>UT-Austin,</span>
+              <span class="author-block"><sup>4</sup>RUC</span>
+            </div>
+            <br>
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2602.xxxxx" target="_blank" class="external-link ">
+              <span class="icon">
+                <i class="ai ai-arxiv"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+          </span>
+          &nbsp;&nbsp;
+            <span class="link-block">
+              <a href="https://github.com/thu-ml/Causal-Forcing" target="_blank" class="external-link ">
+              <span class="icon">
+                <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+              </span>
+              <span>Code</span>
+            </a>
+          </span>
+          
+           <div class="hero-body" style="padding-bottom: 0rem;">
+                <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                    <h4 class="title is-4" style="color: #3273dc; margin-bottom: 1rem;">TL;DR</h4>
+                    <div class="content has-text-justified" style="font-size: 1.25rem; line-height: 1.6; background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #3273dc;">
+                        <p>
+                        <strong>Causal Forcing</strong> 
+                            significantly outperforms Self Forcing in both <strong>visual quality and motion dynamics</strong>, 
+                            while plugging into the same Self Forcing inference setup with <strong>unchanged inference efficiency</strong> 
+                            —enabling real-time, streaming video generation on a single RTX 4090.</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ********************************************************************主视频****************************************************************************** -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body" id="demo">
+        <video controls style="width:100%">
+            <source src="videos/demo.mp4" type="video/mp4" />
+        </video>
+        <p style="color:black;font-size: 1em; margin-top: 10px; text-align: center;">
+          (This webpage contains a lot of videos. We suggest using Chrome for the best experience.)
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="hero is-small">
+    <div class="hero-body ">
+      <hr>
+      <div class="container " id="abstract">
+        <h2 id="obj-comparison" class="title is-3 has-text-centered">Overview</h2>
+        <figure class="image is-centered" style="display: flex; justify-content: center; align-items: center;">
+          <img src="images/overview.png" style="width: 85%; height: auto;">
+        </figure>
+        
+        <div class="content has-text-justified" style="font-size: 1.5rem; line-height: 1.8;">
+          <p style="color:black;">
+            We identify a theoretical flaw in Self Forcing’s training pipeline during ODE initialization: a bidirectional teacher should not be used to supervise an autoregressive student, as this violates frame-level injectivity. Motivated by this analysis, we propose Causal Forcing: we first fine-tune a bidirectional base model into an autoregressive diffusion model, then use it as the teacher for ODE initialization, followed by the same DMD stage as in Self Forcing. Our method significantly outperforms Self Forcing in both visual quality and motion dynamics, while keeping the training budget and inference efficiency unchanged.
+         </p>
+         
+        </div>
+
+      </div>
+
+
+      <br>
+      <br>
+      <hr>
+ 
+      <div class="container " id="text2short">
+        <h2 id="obj-comparison" class="title is-3 has-text-centered">Comparison to Self Forcing
+        </h2>
+        
+      </div>
+
+      <br>
+
+    <!-- ================================================================================================================================  -->
+    <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/Across a snowfield under pink dawn, a skier in a crimson down jacket, fur-lined hood, and mirrored g.mp4"
+                type="video/mp4">
+            </video>
+            </p>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/At a misty waterfall shrine in Japan, a shrine maiden in a white and vermilion outfit fills the fram.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/Beneath a mountain aurora in Lapland, a photographer in a crimson parka with fur hood and frost-dust.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <!-- <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/High in a Himalayan monastery courtyard, a monk in a deep maroon robe and turquoise beads fills the .mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/On a winter sunrise in a Scandinavian village, a woman in a thick blue coat and patterned mittens do.mp4"
+                type="video/mp4">
+            </video>
+        </div> -->
+
+      </div>
+        
+
+
+
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/In spring under a tunnel of wisteria, a dancer in a pale lavender dress and silver hairpin fills the.mp4"
+                type="video/mp4">
+            </video>
+            </p>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/In spring at a seaside promenade, a woman in a striped dress and light cardigan fills the foreground.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/In spring on a lavender hillside after rain, a woman in a cream blouse and lilac skirt dominates the.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <!-- <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/On a glacial cave floor lit by blue ice, a guide in a yellow parka and crampons fills the foreground.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+       
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/Winter morning in a snow-dusted town square, a woman in a cobalt coat and patterned mittens fills th.mp4"
+                type="video/mp4">
+            </video>
+        </div> -->
+
+
+      </div>
+    <!-- ================================================================================================================================  -->
+ <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/On a winter night beside an icy shoreline, a man in a navy parka and wool beanie dominates the frame.mp4"
+                type="video/mp4">
+            </video>
+            </p>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/Late autumn in a cozy café, a woman in a burgundy sweater and gold earrings fills the foreground in .mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/Inside a Seoul hanok courtyard with falling snow, a tea master in a charcoal hanbok and silver hairp.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <!-- <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/In late autumn in a museum hall, a curator in a dark blazer and silk scarf dominates the frame in ci.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+       
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/At a tranquil desert temple in Petra, an explorer in a sand scarf, olive jacket, and leather satchel.mp4"
+                type="video/mp4">
+            </video>
+        </div> -->
+
+
+      </div>
+
+
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/In a field of red poppies under stormy skies, a poet in a black coat with a scarlet scarf fills the .mp4"
+                type="video/mp4">
+            </video>
+            </p>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/Late autumn in a city park, a woman in a camel coat and bright red beret fills the foreground in UHD.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/Inside a Tokyo robotics lab, an engineer in a white jumpsuit with neon accents dominates the frame i.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <!-- <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/Late spring in a street lined with fresh leaves, a violin student in a light trench coat and pleated.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+       
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/Winter sunrise on a frozen fjord overlook, a mountaineer in a bright down suit and mirrored goggles .mp4"
+                type="video/mp4">
+            </video>
+        </div> -->
+
+
+      </div>
+
+
+     
+
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/A detailed and heartwarming wildlife photograph capturing a mother bird tenderly feeding her chicks .mp4"
+                type="video/mp4">
+            </video>
+            </p>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/A scenic photograph capturing the moment a steam train departs from the Glenfinnan Viaduct, a histor.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/A serene orchard scene in the style of a gentle watercolor painting, with trees heavily laden with f.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <!-- <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/A macro shot of a man who appears to be trapped inside a lightbulb. The man, with a puzzled expressi.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+       
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/A cinematic closeup and detailed portrait of a reindeer standing in a snowy forest at sunset. The li.mp4"
+                type="video/mp4">
+            </video>
+        </div> -->
+
+
+      </div>
+
+
+    <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/A vibrant ecosystem bustling with activity, primarily composed of hundreds of bees. The bees are dep.mp4"
+                type="video/mp4">
+            </video>
+            </p>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/A serene watercolor painting of a mother duck leading her six ducklings across a tranquil pond. The .mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/A high-tech, cartoon-style illustration of a computer mouse with legs running on a treadmill. The mo.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <!-- <div class="item">
+            <video id="cereal" controls preload="metadata" autoplay muted loop playsinline>
+            <source
+                src="demos/A photo in a realistic style depicting a young girl sitting on a wooden chair, peeling an orange wit.mp4"
+                type="video/mp4">
+            </video>
+        </div> -->
+
+
+      </div>
+
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        TBD
+  </code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container" align="center">
+      <div class="column is-8">
+        <div class="content">
+          <p style="color:black;">
+            This website template is borrowed from <a href="https://causvid.github.io/">CausVid</a> and <a href="https://fate-zero-edit.github.io/">Fate/Zero</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var videos = document.querySelectorAll('#results-carousel video');
+
+      videos.forEach(function (video) {
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (!isMobile) {
+          if (!video.classList.contains('single_image_video')) {
+            video.setAttribute('autoplay', 'autoplay');
+          }
+        } else {
+          console.log('Autoplay disabled for mobile devices');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
